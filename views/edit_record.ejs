@@ -1,0 +1,29 @@
+
+<%- include('layouts/header.ejs') %>
+
+<div class="container">
+    <div class="row justify-content-center mt-5 py-5">
+        <div class="col-8">
+            <form action="/update/record/<%=data._id %>" method="post" class="border-0">
+                <div class="row p-3 bg-light-blue rounded-4">
+                    <h2 class="lead fw-normal fs-3 text-capitalize">Update Record</h2>
+                    <hr class="mt-2">
+                    <div class="mb-3">
+                        <label for="title" class="form-label fs-5">Title</label>
+                        <input type="text" class="form-control field-control" placeholder="Enter Title" name="title"
+                            value="<%=data.title %>" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label fs-5">Description</label>
+                        <input type="text" class="form-control field-control" placeholder="Enter description"
+                            name="description" value="<%=data.description %>" required>
+                    </div>
+                    <hr class="mt-2">
+                    <div class="col-12 mb-2">
+                        <button type="submit" class="btn btn-lg btn-primary fs-4 w-100">Update Record</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
