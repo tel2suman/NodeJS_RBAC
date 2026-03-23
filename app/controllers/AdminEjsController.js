@@ -220,7 +220,7 @@ class AdminEjsController {
   async logoutAdmin(req, res) {
     try {
       // clear cookie
-      res.clearCookie("token");
+      res.clearCookie("admintoken");
 
       return res.redirect("/admin/login");
     } catch (error) {
